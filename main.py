@@ -8,6 +8,7 @@ from src.models.logistic_regression import CustomLogisticRegression
 from src.models.knn import CustomKNN
 from src.models.naive_bayes import CustomNaiveBayes
 from src.models.perceptron import CustomPerceptron
+from src.models.xgboost import CustomXGBoost
 
 def ensure_data_processed():
     # checking if we already made the npy files to save time
@@ -77,9 +78,10 @@ def main():
     # setup models with some basic hyperparameters
     models = {
         "Logistic Regression": CustomLogisticRegression(learning_rate=0.01, epochs=500),
-        # "K-Nearest Neighbors": CustomKNN(k=3),
+        "K-Nearest Neighbors": CustomKNN(k=3),
         "Naive Bayes": CustomNaiveBayes(),
-        "Perceptron": CustomPerceptron(learning_rate=0.01, epochs=500)
+        "Perceptron": CustomPerceptron(learning_rate=0.01, epochs=500),
+        "XGBoost": CustomXGBoost()
     }
 
     # test on imbalanced data

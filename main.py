@@ -38,20 +38,20 @@ def flatten_windows(X):
     # flatten the 3D windows into 2D so the basic models don't crash
     return X.reshape(X.shape[0], -1)
 
-def balance_data_downsample(X, y):
-    # handling imbalance by down-sampling class 0 to match class 1 count
-    indices_0 = np.where(y == 0)[0]
-    indices_1 = np.where(y == 1)[0]
+# def balance_data_downsample(X, y):
+#     # handling imbalance by down-sampling class 0 to match class 1 count
+#     indices_0 = np.where(y == 0)[0]
+#     indices_1 = np.where(y == 1)[0]
     
-    min_class_count = len(indices_1)
-    np.random.seed(42) # fixed seed for reproducibility
+#     min_class_count = len(indices_1)
+#     np.random.seed(42) # fixed seed for reproducibility
     
-    # randomly pick the same amount of 0s
-    sampled_indices_0 = np.random.choice(indices_0, size=min_class_count, replace=False)
-    balanced_indices = np.concatenate([sampled_indices_0, indices_1])
-    np.random.shuffle(balanced_indices)
+#     # randomly pick the same amount of 0s
+#     sampled_indices_0 = np.random.choice(indices_0, size=min_class_count, replace=False)
+#     balanced_indices = np.concatenate([sampled_indices_0, indices_1])
+#     np.random.shuffle(balanced_indices)
     
-    return X[balanced_indices], y[balanced_indices]
+#     return X[balanced_indices], y[balanced_indices]
 
 def evaluate_model(model, X_train, y_train, X_test, y_test):
     # train and get predictions
@@ -73,7 +73,7 @@ def main():
     X_test = flatten_windows(X_test_raw)
 
     # create a balanced version of the training set
-    X_train_bal, y_train_bal = balance_data_downsample(X_train, y_train)
+    # X_train_bal, y_train_bal = balance_data_downsample(X_train, y_train)
 
     # setup models with some basic hyperparameters
     models = {
@@ -95,14 +95,14 @@ def main():
             print(f"  {k}: {v:.4f}" if isinstance(v, float) else f"  {k}: {v}")
 
     # test on balanced data
-    print("\n" + "="*40)
-    print(" RESULTS (WITH BALANCING)")
-    print("="*40)
-    for name, model in models.items():
-        print(f"\nEvaluating {name}...")
-        metrics = evaluate_model(model, X_train_bal, y_train_bal, X_test, y_test)
-        for k, v in metrics.items():
-            print(f"  {k}: {v:.4f}" if isinstance(v, float) else f"  {k}: {v}")
+    # print("\n" + "="*40)
+    # print(" RESULTS (WITH BALANCING)")
+    # print("="*40)
+    # for name, model in models.items():
+    #     print(f"\nEvaluating {name}...")
+    #     metrics = evaluate_model(model, X_train_bal, y_train_bal, X_test, y_test)
+    #     for k, v in metrics.items():
+    #         print(f"  {k}: {v:.4f}" if isinstance(v, float) else f"  {k}: {v}")
 
 if __name__ == "__main__":
     main()

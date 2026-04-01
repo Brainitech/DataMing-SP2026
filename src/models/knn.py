@@ -15,13 +15,13 @@ class CustomKNN:
         return np.array([self._predict(x) for x in X])
 
     def _predict(self, x):
-        # find distance between input and all training samples
-        distances = [np.linalg.norm(x - x_train) for x_train in self.X_train]
+        # FAST WAY: numpy calculates distance to all training samples at once
+        distances = np.linalg.norm(self.X_train - x, axis=1)
         
         # get indices of the k nearest ones
         k_indices = np.argsort(distances)[:self.k]
-        k_nearest_labels = [self.y_train[i] for i in k_indices]
+        k_nearest_labels = self.y_train[k_indices]
         
-        # return the most common label among the k nearest
-        most_common = max(set(k_nearest_labels), key=k_nearest_labels.count)
+        # very fast way to find the most frequent label (0 or 1)
+        most_common = np.bincount(k_nearest_labels).argmax()
         return most_common

@@ -1,0 +1,131 @@
+Found preprocessed .npy files. Skipping preprocessing.
+
+Loading data...
+
+==================================================
+ RESULTS — WITHOUT CLASS WEIGHTING
+==================================================
+
+[Logistic Regression]
+
+  Tuning Logistic Regression over 4 configs x 5 folds...
+  Best params: {'learning_rate': 0.01, 'epochs': 300}  |  CV Balanced Accuracy: 0.6174
+    TP: 0
+    TN: 9683
+    FP: 6
+    FN: 952
+    F1 Score: 0
+    Balanced Accuracy: 0.4997
+    Best Params: {'learning_rate': 0.01, 'epochs': 300}
+
+[K-Nearest Neighbors]
+
+  Tuning K-Nearest Neighbors over 3 configs x 5 folds...
+  Best params: {'k': 3}  |  CV Balanced Accuracy: 0.8237
+    TP: 560
+    TN: 9600
+    FP: 89
+    FN: 392
+    F1 Score: 0.6996
+    Balanced Accuracy: 0.7895
+    Best Params: {'k': 3}
+
+[Naive Bayes]
+
+  Tuning Naive Bayes over 1 configs x 5 folds...
+  Best params: {}  |  CV Balanced Accuracy: 0.8391
+    TP: 754
+    TN: 8552
+    FP: 1137
+    FN: 198
+    F1 Score: 0.5304
+    Balanced Accuracy: 0.8373
+    Best Params: {}
+
+[Perceptron]
+
+  Tuning Perceptron over 4 configs x 5 folds...
+  Best params: {'learning_rate': 0.001, 'epochs': 500}  |  CV Balanced Accuracy: 0.7635
+    TP: 289
+    TN: 9611
+    FP: 78
+    FN: 663
+    F1 Score: 0.4382
+    Balanced Accuracy: 0.6478
+    Best Params: {'learning_rate': 0.001, 'epochs': 500}
+
+[XGBoost]
+
+  Tuning XGBoost over 8 configs x 5 folds...
+  Best params: {'n_estimators': 200, 'max_depth': 6, 'learning_rate': 0.1}  |  CV Balanced Accuracy: 0.9300
+    TP: 828
+    TN: 9596
+    FP: 93
+    FN: 124
+    F1 Score: 0.8841
+    Balanced Accuracy: 0.9301
+    Best Params: {'n_estimators': 200, 'max_depth': 6, 'learning_rate': 0.1}
+
+==================================================
+ RESULTS — WITH CLASS WEIGHTING (BALANCED)
+==================================================
+
+[Logistic Regression]
+
+  Tuning Logistic Regression over 4 configs x 5 folds...
+  Best params: {'learning_rate': 0.001, 'epochs': 500}  |  CV Balanced Accuracy: 0.5215
+    TP: 796
+    TN: 1576
+    FP: 8113
+    FN: 156
+    F1 Score: 0.1614
+    Balanced Accuracy: 0.4994
+    Best Params: {'learning_rate': 0.001, 'epochs': 500}
+
+[K-Nearest Neighbors]
+
+  Tuning K-Nearest Neighbors over 3 configs x 5 folds...
+  Best params: {'k': 7}  |  CV Balanced Accuracy: 0.9097
+    TP: 803
+    TN: 8961
+    FP: 728
+    FN: 149
+    F1 Score: 0.6468
+    Balanced Accuracy: 0.8842
+    Best Params: {'k': 7}
+
+[Naive Bayes]
+
+  Tuning Naive Bayes over 1 configs x 5 folds...
+  Best params: {}  |  CV Balanced Accuracy: 0.8395
+    TP: 756
+    TN: 8541
+    FP: 1148
+    FN: 196
+    F1 Score: 0.5294
+    Balanced Accuracy: 0.8378
+    Best Params: {}
+
+[Perceptron]
+
+  Tuning Perceptron over 4 configs x 5 folds...
+  Best params: {'learning_rate': 0.001, 'epochs': 500}  |  CV Balanced Accuracy: 0.8135
+    TP: 707
+    TN: 8225
+    FP: 1464
+    FN: 245
+    F1 Score: 0.4528
+    Balanced Accuracy: 0.7958
+    Best Params: {'learning_rate': 0.001, 'epochs': 500}
+
+[XGBoost]
+
+  Tuning XGBoost over 8 configs x 5 folds...
+  Best params: {'n_estimators': 200, 'max_depth': 6, 'learning_rate': 0.05}  |  CV Balanced Accuracy: 0.9625
+    TP: 926
+    TN: 9225
+    FP: 464
+    FN: 26
+    F1 Score: 0.7908
+    Balanced Accuracy: 0.9624
+    Best Params: {'n_estimators': 200, 'max_depth': 6, 'learning_rate': 0.05}

@@ -86,7 +86,7 @@ Below are the side-by-side comparisons of the confusion matrices for each model,
 - **Department:** AI/ML
 - **Term:** SP 2026
 
-**Group Members:**
+**Group - 5 Members:**
 
 - Venkat Saahit Kamu [BTECH/10904/23]
 - Harshith Agarwal [BTECH/10721/23]

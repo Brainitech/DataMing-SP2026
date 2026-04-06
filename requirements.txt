@@ -3,3 +3,4 @@ pandas
 matplotlib
 xgboost
 cupy-cuda12x
+seaborn

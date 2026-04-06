@@ -6,18 +6,6 @@ Loading data...
  RESULTS — WITHOUT CLASS WEIGHTING
 ==================================================
 
-[Logistic Regression]
-
-  Tuning Logistic Regression over 4 configs x 5 folds...
-  Best params: {'learning_rate': 0.01, 'epochs': 300}  |  CV Balanced Accuracy: 0.6174
-    TP: 0
-    TN: 9683
-    FP: 6
-    FN: 952
-    F1 Score: 0
-    Balanced Accuracy: 0.4997
-    Best Params: {'learning_rate': 0.01, 'epochs': 300}
-
 [K-Nearest Neighbors]
 
   Tuning K-Nearest Neighbors over 3 configs x 5 folds...
@@ -69,18 +57,6 @@ Loading data...
 ==================================================
  RESULTS — WITH CLASS WEIGHTING (BALANCED)
 ==================================================
-
-[Logistic Regression]
-
-  Tuning Logistic Regression over 4 configs x 5 folds...
-  Best params: {'learning_rate': 0.001, 'epochs': 500}  |  CV Balanced Accuracy: 0.5215
-    TP: 796
-    TN: 1576
-    FP: 8113
-    FN: 156
-    F1 Score: 0.1614
-    Balanced Accuracy: 0.4994
-    Best Params: {'learning_rate': 0.001, 'epochs': 500}
 
 [K-Nearest Neighbors]
 
